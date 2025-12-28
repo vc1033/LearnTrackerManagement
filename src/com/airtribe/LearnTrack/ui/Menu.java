@@ -21,22 +21,6 @@ public class Menu {
         CourseService courseService = new CourseService();
         EnrollmentService enrollmentService = new EnrollmentService(studentService, courseService);
 
-//        Student student1 = new Student("vaishnav","satheesh","satheesh@99","B1",true);
-//        Student student2 = new Student("rohit","sharma","sharma@99","B1",true);
-//         studentService.addStudent(student1);
-//        studentService.addStudent(student2);
-//        student2.setLastName("Rahul");
-//        studentService.viewAllStudents();
-//        Course course1 = new Course("Java" , "Java fundamentals",3,true);
-//        Course course2 = new Course("Node" , "Node fundamentals" , 4 , true);
-//        courseService.addNewCourse(course1);
-//        courseService.addNewCourse(course2);
-//        courseService.viewAllCourses();
-//        enrollmentService.enrollStudent(1,1);
-//        enrollmentService.viewEnrollments();
-//        enrollmentService.updateStudentEnrollmentStatus(1, EnrollmentStatus.COMPLETED);
-//        enrollmentService
-
         Scanner sc = new Scanner(System.in);
         int selection;
 
