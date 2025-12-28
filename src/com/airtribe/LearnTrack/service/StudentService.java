@@ -10,10 +10,10 @@ import java.util.List;
 public class StudentService {
     private List<Student> students = new ArrayList<>();
 
-    public void addStudent(Student student)
-    {
-        if (student.getDisplayName().trim().isEmpty() || student.getBatch().trim().isEmpty()) throw new InvalidInputException("Invalid Input");
-        try{
+    public void addStudent(Student student) {
+        if (student.getDisplayName().trim().isEmpty() || student.getBatch().trim().isEmpty())
+            throw new InvalidInputException("Invalid Input");
+        try {
             students.add(student);
 
         } catch (Exception e) {
@@ -21,20 +21,20 @@ public class StudentService {
         }
     }
 
-    public List<Student> viewAllStudents(){
-        if(students.isEmpty()) throw new EntityNotFoundException("No Students are added");
-        else{
+    public void viewAllStudents() {
+        if (students.isEmpty()) throw new EntityNotFoundException("No Students are added");
+        else {
             System.out.println("Students are as follows :- ");
-            return students;
+            System.out.println("ID Name Batch Status");
+            students.forEach(x -> System.out.println(x.getId() + " " + x.getDisplayName() + " " + x.getBatch() + " " + x.getStatus()));
         }
     }
 
-    public Student getStudentById(int id)
-    {
-        return students.stream().filter(x -> x.getId() == id).findFirst().orElseThrow(()->new EntityNotFoundException("Student with  ID " +id + " doesn't exist"));
+    public Student getStudentById(int id) {
+        return students.stream().filter(x -> x.getId() == id).findFirst().orElseThrow(() -> new EntityNotFoundException("Student with  ID " + id + " doesn't exist"));
     }
 
-    public void deactivateStudent(int id){
+    public void deactivateStudent(int id) {
 
         Student student = getStudentById(id);
         student.setActive(false);

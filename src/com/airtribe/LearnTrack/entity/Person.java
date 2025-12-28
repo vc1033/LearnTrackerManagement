@@ -1,19 +1,16 @@
 package com.airtribe.LearnTrack.entity;
 
-import com.airtribe.LearnTrack.exception.InvalidInputException;
-
 public abstract class Person {
     private int id;
     private String firstName;
     private String lastName;
     private String email;
 
-    protected Person(int id, String firstName, String lastName , String email) {
-
-            this.id = id;
-            this.email = email;
-            this.lastName = lastName;
-            this.firstName = firstName;
+    protected Person(int id, String firstName, String lastName, String email) {
+        this.id = id;
+        this.email = email;
+        this.lastName = lastName;
+        this.firstName = firstName;
     }
 
     protected Person(int id, String firstName, String lastName) {
@@ -22,9 +19,10 @@ public abstract class Person {
         this.firstName = firstName;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
+
     protected String getFirstName() {
         return firstName;
     }

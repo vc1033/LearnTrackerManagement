@@ -15,9 +15,10 @@ public class LearningTrackerOptions {
                     "7 : Deactivate a course",
                     "8 : Activate a course",
                     "9 : Enroll a student in a course",
-                    "10 : View enrollments for a student",
-                    "11 : Mark enrollment as completed/cancelled",
+                    "10 : View All Enrollments",
+                    "11 : View enrollments for a student",
+                    "12 : Mark enrollment as completed/cancelled",
                     "0 : Exit"
 
-    );
+            );
 }

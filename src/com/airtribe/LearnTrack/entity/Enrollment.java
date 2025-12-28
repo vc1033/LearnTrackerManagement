@@ -21,7 +21,7 @@ public class Enrollment {
         this.status = EnrollmentStatus.ACTIVE;
     }
 
-    public void setEnrollmentStatus(EnrollmentStatus status){
+    public void setEnrollmentStatus(EnrollmentStatus status) {
         this.status = status;
     }
 

@@ -1,8 +1,7 @@
 package com.airtribe.LearnTrack.exception;
 
-public class InvalidInputException extends  RuntimeException{
-    public InvalidInputException(String message)
-    {
+public class InvalidInputException extends RuntimeException {
+    public InvalidInputException(String message) {
         super(message);
     }
 }

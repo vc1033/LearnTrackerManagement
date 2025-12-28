@@ -5,16 +5,17 @@ public class IdGenerator {
     private static int courseId;
     private static int enrollmentId;
 
-    public static int updateStudentId(){
+    public static int getNextStudentId(){
         return ++studentId;
     }
 
-    public static int updateCourseId(){
+    public static int getNextCourseId(){
         return ++courseId;
     }
 
-    public static int updateEnrollmentId(){
+    public static int getNextEnrollmentId(){
         return ++enrollmentId;
     }
+
 
 }
